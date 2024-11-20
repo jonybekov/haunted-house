@@ -49,13 +49,13 @@ const addHouse = () => {
 
   /* Wall */
   const wallColorTexture = textureLoader.load(
-    "/haunted-house/wall/rock_wall_10_1k/rock_wall_10_diff_1k.jpg"
+    "/wall/rock_wall_10_1k/rock_wall_10_diff_1k.jpg"
   );
   const wallArmTexture = textureLoader.load(
-    "/haunted-house/wall/rock_wall_10_1k/rock_wall_10_arm_1k.jpg"
+    "/wall/rock_wall_10_1k/rock_wall_10_arm_1k.jpg"
   );
   const wallNormalTexture = textureLoader.load(
-    "/haunted-house/wall/rock_wall_10_1k/rock_wall_10_nor_gl_1k.jpg"
+    "/wall/rock_wall_10_1k/rock_wall_10_nor_gl_1k.jpg"
   );
 
   const repeat = 1.5;
@@ -86,13 +86,13 @@ const addHouse = () => {
   /* Roof */
 
   const roofColorTexture = textureLoader.load(
-    "/haunted-house/roof/clay_roof_tiles_02_1k/clay_roof_tiles_02_diff_1k.jpg"
+    "/roof/clay_roof_tiles_02_1k/clay_roof_tiles_02_diff_1k.jpg"
   );
   const roofArmTexture = textureLoader.load(
-    "/haunted-house/roof/clay_roof_tiles_02_1k/clay_roof_tiles_02_arm_1k.jpg"
+    "/roof/clay_roof_tiles_02_1k/clay_roof_tiles_02_arm_1k.jpg"
   );
   const roofNormalTexture = textureLoader.load(
-    "/haunted-house/roof/clay_roof_tiles_02_1k/clay_roof_tiles_02_nor_gl_1k.jpg"
+    "/roof/clay_roof_tiles_02_1k/clay_roof_tiles_02_nor_gl_1k.jpg"
   );
 
   const roofRepeat = 4;
@@ -249,18 +249,18 @@ const addGraves = () => {
 const addDoor = () => {
   const colorTexture = textureLoader.load("/haunted-house/door/color.jpg");
   const aoTexture = textureLoader.load(
-    "/haunted-house/haunted-house/door/ambientOcclusion.jpg"
+    "/haunted-house/door/ambientOcclusion.jpg"
   );
   const alphaTexture = textureLoader.load("/haunted-house/door/alpha.jpg");
   const normalTexture = textureLoader.load("/haunted-house/door/normal.jpg");
   const displacementTexture = textureLoader.load(
-    "/haunted-house/haunted-house/door/height.jpg"
+    "/haunted-house/door/height.jpg"
   );
   const metalnessTexture = textureLoader.load(
-    "/haunted-house/haunted-house/door/metalness.jpg"
+    "/haunted-house/door/metalness.jpg"
   );
   const roughnessTexture = textureLoader.load(
-    "/haunted-house/haunted-house/door/roughness.jpg"
+    "/haunted-house/door/roughness.jpg"
   );
 
   colorTexture.colorSpace = THREE.SRGBColorSpace;
