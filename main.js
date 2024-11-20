@@ -4,6 +4,10 @@ import * as dat from "dat.gui";
 
 import "./style.css";
 
+function getImageUrl(name) {
+  return new URL(`./dir/${name}.png`, import.meta.url).href;
+}
+
 const gui = new dat.GUI();
 const textureLoader = new THREE.TextureLoader();
 
@@ -45,13 +49,13 @@ const addHouse = () => {
 
   /* Wall */
   const wallColorTexture = textureLoader.load(
-    "/wall/rock_wall_10_1k/rock_wall_10_diff_1k.jpg"
+    "/haunted-house/wall/rock_wall_10_1k/rock_wall_10_diff_1k.jpg"
   );
   const wallArmTexture = textureLoader.load(
-    "/wall/rock_wall_10_1k/rock_wall_10_arm_1k.jpg"
+    "/haunted-house/wall/rock_wall_10_1k/rock_wall_10_arm_1k.jpg"
   );
   const wallNormalTexture = textureLoader.load(
-    "/wall/rock_wall_10_1k/rock_wall_10_nor_gl_1k.jpg"
+    "/haunted-house/wall/rock_wall_10_1k/rock_wall_10_nor_gl_1k.jpg"
   );
 
   const repeat = 1.5;
@@ -82,13 +86,13 @@ const addHouse = () => {
   /* Roof */
 
   const roofColorTexture = textureLoader.load(
-    "/roof/clay_roof_tiles_02_1k/clay_roof_tiles_02_diff_1k.jpg"
+    "/haunted-house/roof/clay_roof_tiles_02_1k/clay_roof_tiles_02_diff_1k.jpg"
   );
   const roofArmTexture = textureLoader.load(
-    "/roof/clay_roof_tiles_02_1k/clay_roof_tiles_02_arm_1k.jpg"
+    "/haunted-house/roof/clay_roof_tiles_02_1k/clay_roof_tiles_02_arm_1k.jpg"
   );
   const roofNormalTexture = textureLoader.load(
-    "/roof/clay_roof_tiles_02_1k/clay_roof_tiles_02_nor_gl_1k.jpg"
+    "/haunted-house/roof/clay_roof_tiles_02_1k/clay_roof_tiles_02_nor_gl_1k.jpg"
   );
 
   const roofRepeat = 4;
@@ -123,18 +127,18 @@ const addHouse = () => {
 };
 
 const addFloor = () => {
-  const alphaTexture = textureLoader.load("/floor/alpha.jpg");
+  const alphaTexture = textureLoader.load("/haunted-house/floor/alpha.jpg");
   const colorTexture = textureLoader.load(
-    "/floor/aerial_rocks_04_1k/aerial_rocks_04_diff_1k.jpg"
+    "/haunted-house/floor/aerial_rocks_04_1k/aerial_rocks_04_diff_1k.jpg"
   );
   const armTexture = textureLoader.load(
-    "/floor/aerial_rocks_04_1k/aerial_rocks_04_arm_1k.jpg"
+    "/haunted-house/floor/aerial_rocks_04_1k/aerial_rocks_04_arm_1k.jpg"
   );
   const normalTexture = textureLoader.load(
-    "/floor/aerial_rocks_04_1k/aerial_rocks_04_nor_gl_1k.png"
+    "/haunted-house/floor/aerial_rocks_04_1k/aerial_rocks_04_nor_gl_1k.png"
   );
   const displacementTexture = textureLoader.load(
-    "/floor/aerial_rocks_04_1k/aerial_rocks_04_disp_1k.jpg"
+    "/haunted-house/floor/aerial_rocks_04_1k/aerial_rocks_04_disp_1k.jpg"
   );
 
   colorTexture.repeat.set(4, 4);
@@ -191,13 +195,13 @@ const addGraves = () => {
   const graves = new THREE.Group();
 
   const graveColorTexture = textureLoader.load(
-    "/tomb/plastered_stone_wall_1k/plastered_stone_wall_diff_1k.jpg"
+    "/haunted-house/tomb/plastered_stone_wall_1k/plastered_stone_wall_diff_1k.jpg"
   );
   const graveArmTexture = textureLoader.load(
-    "/tomb/plastered_stone_wall_1k/plastered_stone_wall_arm_1k.jpg"
+    "/haunted-house/tomb/plastered_stone_wall_1k/plastered_stone_wall_arm_1k.jpg"
   );
   const graveNormalTexture = textureLoader.load(
-    "/tomb/plastered_stone_wall_1k/plastered_stone_wall_nor_gl_1k.jpg"
+    "/haunted-house/tomb/plastered_stone_wall_1k/plastered_stone_wall_nor_gl_1k.jpg"
   );
 
   const roofRepeat = 1;
@@ -243,13 +247,21 @@ const addGraves = () => {
 };
 
 const addDoor = () => {
-  const colorTexture = textureLoader.load("/door/color.jpg");
-  const aoTexture = textureLoader.load("/door/ambientOcclusion.jpg");
-  const alphaTexture = textureLoader.load("/door/alpha.jpg");
-  const normalTexture = textureLoader.load("/door/normal.jpg");
-  const displacementTexture = textureLoader.load("/door/height.jpg");
-  const metalnessTexture = textureLoader.load("/door/metalness.jpg");
-  const roughnessTexture = textureLoader.load("/door/roughness.jpg");
+  const colorTexture = textureLoader.load("/haunted-house/door/color.jpg");
+  const aoTexture = textureLoader.load(
+    "/haunted-house/haunted-house/door/ambientOcclusion.jpg"
+  );
+  const alphaTexture = textureLoader.load("/haunted-house/door/alpha.jpg");
+  const normalTexture = textureLoader.load("/haunted-house/door/normal.jpg");
+  const displacementTexture = textureLoader.load(
+    "/haunted-house/haunted-house/door/height.jpg"
+  );
+  const metalnessTexture = textureLoader.load(
+    "/haunted-house/haunted-house/door/metalness.jpg"
+  );
+  const roughnessTexture = textureLoader.load(
+    "/haunted-house/haunted-house/door/roughness.jpg"
+  );
 
   colorTexture.colorSpace = THREE.SRGBColorSpace;
 
